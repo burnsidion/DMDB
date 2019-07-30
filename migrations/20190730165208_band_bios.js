@@ -1,5 +1,5 @@
 exports.up = (knex, Promise) => {
-  return knex.schema.createTable('sumthin-sillay', (table) => {
+  return knex.schema.createTable('band_bios', (table) => {
     table.increments()
     table.varchar('bandName', 255).notNullable()
     table.varchar('bandLogo', 255).notNullable()
@@ -12,4 +12,4 @@ exports.up = (knex, Promise) => {
   })
 };
 
-exports.down = (knex, Promise) => knex.schema.dropTableIfExists('sumthin-sillay')
+exports.down = (knex, Promise) => knex.schema.dropTableIfExists('band_bios')
